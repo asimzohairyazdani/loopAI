@@ -1,16 +1,8 @@
 # RAG POC - Retrieval Augmented Generation for Financial Data
 
-A proof-of-concept application that uses Retrieval Augmented Generation (RAG) to answer natural language questions about financial holdings and trading data. This project combines FAISS vector search with the Mistral language model running locally via Ollama.
+A backend application that uses Retrieval Augmented Generation (RAG) to answer natural language questions about financial holdings and trading data. This project combines FAISS vector search with the Mistral language model running locally via Ollama.
 
-## What This Does
 
-Ever wanted to ask questions about your financial portfolio in plain English instead of writing SQL queries? That's what this RAG system does. It takes your CSV data (holdings, trades, etc.), converts it into vectors, and lets you query it using natural language. The Mistral LLM provides context-aware answers based on what it finds in your data.
-
-Example questions you can ask:
-- "What are the main holdings in the portfolio?"
-- "Tell me about the securities in the Garfield fund"
-- "Which bonds are in the portfolio?"
-- "What trading activity has occurred?"
 
 ## Getting Started
 
@@ -25,8 +17,8 @@ Before you start, make sure you have:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/rag-poc.git
-   cd rag-poc
+   git clone https://github.com/asimzohairyazdani/loopAI.git
+   cd loopAI
    ```
 
 2. **Create a virtual environment**
