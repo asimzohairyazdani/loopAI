@@ -28,14 +28,14 @@ def create_comprehensive_summaries() -> list[str]:
     holdings_df = pd.read_csv(HOLDINGS_FILE)
     trades_df = pd.read_csv(TRADES_FILE)
 
-    # -------- ROW LEVEL DOCS (UNCHANGED IDEA) --------
+    # -------- ROW LEVEL DOCS --------
     for _, row in holdings_df.iterrows():
         summaries.append(" | ".join(f"{k}: {v}" for k, v in row.items()))
 
     for _, row in trades_df.iterrows():
         summaries.append(" | ".join(f"{k}: {v}" for k, v in row.items()))
 
-    # -------- FUND LEVEL AGGREGATES (FIX) --------
+    # -------- FUND LEVEL AGGREGATES  --------
     def fund_level_summary(df, source):
         fund_cols = [c for c in df.columns if "fund" in c.lower() or "portfolio" in c.lower()]
         pl_cols = [c for c in df.columns if "pl_ytd" in c.lower()]

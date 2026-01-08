@@ -1,23 +1,4 @@
-# from fastapi import APIRouter, HTTPException
-# from pydantic import BaseModel
 
-# from app.services.rag import answer
-
-# router = APIRouter()
-
-
-# class Query(BaseModel):
-#     question: str
-
-
-# @router.post("/chat")
-# def chat(query: Query):
-#     if not query.question.strip():
-#         raise HTTPException(400, "Question cannot be empty")
-
-#     return {"answer": answer(query.question)}
-
-#routes.py
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 

@@ -63,13 +63,13 @@ def try_structured_query(question: str) -> str | None:
 # -----------------------------
 def answer_question(question: str) -> str:
     try:
-        # 1️⃣ Try structured logic first
+        # 1️ Try structured logic first
         structured_answer = try_structured_query(question)
         if structured_answer:
             logger.info("Answered via structured logic")
             return structured_answer
 
-        # 2️⃣ Retrieval
+        # 2️ Retrieval
         results = vectorstore.similarity_search_with_score(question, k=TOP_K)
         logger.info(f"Retrieved {len(results)} docs from vectorstore")
 
